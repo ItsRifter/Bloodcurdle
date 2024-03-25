@@ -1,0 +1,90 @@
+[
+    {
+        "file": "D:\\UnrealProjects\\Bloodcurdle\\Source\\Bloodcurdle\\Bloodcurdle.Build.cs",
+        "arguments": [
+            "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\Hostx64\\x64\\cl.exe",
+            "@D:\\UnrealProjects\\Bloodcurdle\\.vscode\\compileCommands_Default\\Bloodcurdle.1.rsp"
+        ],
+        "directory": "D:\\EpicGames\\UE_5.3\\Engine\\Source"
+    },
+    {
+        "file": "D:\\UnrealProjects\\Bloodcurdle\\Source\\Bloodcurdle\\Bloodcurdle.cpp",
+        "arguments": [
+            "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\Hostx64\\x64\\cl.exe",
+            "@D:\\UnrealProjects\\Bloodcurdle\\.vscode\\compileCommands_Default\\Bloodcurdle.1.rsp"
+        ],
+        "directory": "D:\\EpicGames\\UE_5.3\\Engine\\Source"
+    },
+    {
+        "file": "D:\\UnrealProjects\\Bloodcurdle\\Source\\Bloodcurdle\\Bloodcurdle.h",
+        "arguments": [
+            "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\Hostx64\\x64\\cl.exe",
+            "@D:\\UnrealProjects\\Bloodcurdle\\.vscode\\compileCommands_Default\\Bloodcurdle.1.rsp"
+        ],
+        "directory": "D:\\EpicGames\\UE_5.3\\Engine\\Source"
+    },
+    {
+        "file": "D:\\UnrealProjects\\Bloodcurdle\\Source\\Bloodcurdle\\HealthComponent.cpp",
+        "arguments": [
+            "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\Hostx64\\x64\\cl.exe",
+            "@D:\\UnrealProjects\\Bloodcurdle\\.vscode\\compileCommands_Default\\Bloodcurdle.1.rsp"
+        ],
+        "directory": "D:\\EpicGames\\UE_5.3\\Engine\\Source"
+    },
+    {
+        "file": "D:\\UnrealProjects\\Bloodcurdle\\Source\\Bloodcurdle\\HealthComponent.h",
+        "arguments": [
+            "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\Hostx64\\x64\\cl.exe",
+            "@D:\\UnrealProjects\\Bloodcurdle\\.vscode\\compileCommands_Default\\Bloodcurdle.1.rsp"
+        ],
+        "directory": "D:\\EpicGames\\UE_5.3\\Engine\\Source"
+    },
+    {
+        "file": "D:\\UnrealProjects\\Bloodcurdle\\Source\\Bloodcurdle\\MainPlayerCharacter.cpp",
+        "arguments": [
+            "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\Hostx64\\x64\\cl.exe",
+            "@D:\\UnrealProjects\\Bloodcurdle\\.vscode\\compileCommands_Default\\Bloodcurdle.1.rsp"
+        ],
+        "directory": "D:\\EpicGames\\UE_5.3\\Engine\\Source"
+    },
+    {
+        "file": "D:\\UnrealProjects\\Bloodcurdle\\Source\\Bloodcurdle\\MainPlayerCharacter.h",
+        "arguments": [
+            "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\Hostx64\\x64\\cl.exe",
+            "@D:\\UnrealProjects\\Bloodcurdle\\.vscode\\compileCommands_Default\\Bloodcurdle.1.rsp"
+        ],
+        "directory": "D:\\EpicGames\\UE_5.3\\Engine\\Source"
+    },
+    {
+        "file": "D:\\UnrealProjects\\Bloodcurdle\\Source\\Bloodcurdle\\MovablePlatform.cpp",
+        "arguments": [
+            "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\Hostx64\\x64\\cl.exe",
+            "@D:\\UnrealProjects\\Bloodcurdle\\.vscode\\compileCommands_Default\\Bloodcurdle.1.rsp"
+        ],
+        "directory": "D:\\EpicGames\\UE_5.3\\Engine\\Source"
+    },
+    {
+        "file": "D:\\UnrealProjects\\Bloodcurdle\\Source\\Bloodcurdle\\MovablePlatform.h",
+        "arguments": [
+            "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\Hostx64\\x64\\cl.exe",
+            "@D:\\UnrealProjects\\Bloodcurdle\\.vscode\\compileCommands_Default\\Bloodcurdle.1.rsp"
+        ],
+        "directory": "D:\\EpicGames\\UE_5.3\\Engine\\Source"
+    },
+    {
+        "file": "D:\\UnrealProjects\\Bloodcurdle\\Source\\Bloodcurdle\\WeaponBase.cpp",
+        "arguments": [
+            "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\Hostx64\\x64\\cl.exe",
+            "@D:\\UnrealProjects\\Bloodcurdle\\.vscode\\compileCommands_Default\\Bloodcurdle.1.rsp"
+        ],
+        "directory": "D:\\EpicGames\\UE_5.3\\Engine\\Source"
+    },
+    {
+        "file": "D:\\UnrealProjects\\Bloodcurdle\\Source\\Bloodcurdle\\WeaponBase.h",
+        "arguments": [
+            "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\Hostx64\\x64\\cl.exe",
+            "@D:\\UnrealProjects\\Bloodcurdle\\.vscode\\compileCommands_Default\\Bloodcurdle.1.rsp"
+        ],
+        "directory": "D:\\EpicGames\\UE_5.3\\Engine\\Source"
+    }
+]

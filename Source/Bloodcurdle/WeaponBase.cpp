@@ -4,18 +4,18 @@
 #include "WeaponBase.h"
 
 // Sets default values for this component's properties
-UWeaponBase::UWeaponBase()
+AWeaponBase::AWeaponBase()
 {
 	// Set this component to be initialized when the game starts, and to be ticked every frame.  You can turn these features
 	// off to improve performance if you don't need them.
-	PrimaryComponentTick.bCanEverTick = true;
+	PrimaryActorTick.bCanEverTick = true;
 
 	// ...
 }
 
 
 // Called when the game starts
-void UWeaponBase::BeginPlay()
+void AWeaponBase::BeginPlay()
 {
 	Super::BeginPlay();
 
@@ -25,19 +25,19 @@ void UWeaponBase::BeginPlay()
 
 
 // Called every frame
-void UWeaponBase::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
+void AWeaponBase::Tick(float DeltaTime)
 {
-	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
+	Super::Tick(DeltaTime);
 
 	// ...
 }
 
-void UWeaponBase::PrimaryFire()
+void AWeaponBase::PrimaryFire()
 {
 
 }
 
-void UWeaponBase::SecondaryFire()
+void AWeaponBase::SecondaryFire()
 {
 	
 }

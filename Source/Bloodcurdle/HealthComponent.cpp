@@ -35,3 +35,8 @@ void UHealthComponent::TakeDamage(int damage)
 	else
 		OnTookDamage();
 }
+
+void UHealthComponent::OnDeath()
+{
+	OnOwnerDied.Broadcast();
+}

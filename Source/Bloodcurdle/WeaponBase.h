@@ -7,32 +7,28 @@
 #include "InputActionValue.h"
 #include "WeaponBase.generated.h"
 
-UCLASS( ClassGroup=(Custom), Blueprintable, meta=(BlueprintSpawnableComponent) )
-class BLOODCURDLE_API UWeaponBase : public UActorComponent
+UCLASS( ClassGroup=("Items"), Blueprintable, meta=(BlueprintSpawnableComponent) )
+class BLOODCURDLE_API AWeaponBase : public AActor
 {
 	GENERATED_BODY()
 
 public:	
 	// Sets default values for this component's properties
-	UWeaponBase();
+	AWeaponBase();
 
 protected:
 	// Called when the game starts
 	virtual void BeginPlay() override;
 
-	UFUNCTION(BlueprintCallable, Category = "Actions")
+public:	
+	// Called every frame
+	virtual void Tick(float DeltaTime) override;
+
 	void PrimaryFire();
 
-	UFUNCTION(BlueprintCallable, Category = "Actions")
 	void SecondaryFire();
 
 	void DoReload();
 
 	void PlayAnimation();
-
-public:	
-	// Called every frame
-	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
-
-	
 };

@@ -6,8 +6,9 @@
 #include "Components/ActorComponent.h"
 #include "HealthComponent.generated.h"
 
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnDeath);
 
-UCLASS( ClassGroup=(Custom), Blueprintable, meta=(BlueprintSpawnableComponent) )
+UCLASS( ClassGroup=("Gameplay"), meta=(BlueprintSpawnableComponent) )
 class BLOODCURDLE_API UHealthComponent : public UActorComponent
 {
 	GENERATED_BODY()
@@ -19,6 +20,9 @@ public:
 protected:
 	// Called when the game starts
 	virtual void BeginPlay() override;
+
+	UPROPERTY(BlueprintAssignable, Category = "Events")
+	FOnDeath OnOwnerDied;
 
 public:
 
@@ -37,10 +41,9 @@ public:
 	/// @brief Performs functionality on player hurt, afterwards call "OnTookDamage"
 	void TakeDamage(int damage);
 
-	UFUNCTION(BlueprintImplementableEvent, Category = "Gameplay")
+	UFUNCTION(BlueprintImplementableEvent, BlueprintCallable, Category = "Gameplay")
 	/// @brief Performs functionality after player hurt
 	void OnTookDamage();
 
-	UFUNCTION(BlueprintImplementableEvent, Category = "Gameplay")
 	void OnDeath();
 };

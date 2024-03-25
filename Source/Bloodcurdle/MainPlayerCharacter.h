@@ -6,6 +6,7 @@
 #include "GameFramework/Character.h"
 #include "InputActionValue.h"
 #include "Camera/CameraComponent.h"
+//#include "WeaponBase.h"
 #include "MainPlayerCharacter.generated.h"
 
 UCLASS()
@@ -26,7 +27,11 @@ public:
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
+	UFUNCTION(BlueprintCallable, Category = "Gameplay")
+	void ObtainPickup();
+
 protected:
+	
 	UPROPERTY(EditAnywhere, Category = "Input")
 	class UInputMappingContext* InputMap;
 
@@ -45,9 +50,10 @@ protected:
 	UPROPERTY(EditAnywhere, Category = "Input")
 	class UInputAction* SecondaryFireAction;
 
-	//class UWeaponBase ActiveWeapon;
+	//class AWeaponBase* ActiveWeapon;
 
-	//class UWeaponBase* Weapon = &ActiveWeapon;
+	// UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	// TArray<AWeaponBase*> Weapons;
 
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;

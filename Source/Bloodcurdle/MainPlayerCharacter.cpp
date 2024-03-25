@@ -49,7 +49,8 @@ void AMainPlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInpu
 		Input->BindAction(LookAction, ETriggerEvent::Triggered, this, &AMainPlayerCharacter::Look);
 		Input->BindAction(JumpAction, ETriggerEvent::Triggered, this, &AMainPlayerCharacter::DoJump);
 
-		Input->BindActipn(PrimaryFireAction, ETriggerEvent::Triggered, this, &AMainPlayerCharacter::DoPrimaryFire)
+		Input->BindAction(PrimaryFireAction, ETriggerEvent::Triggered, this, &AMainPlayerCharacter::DoPrimaryFire);
+		Input->BindAction(SecondaryFireAction, ETriggerEvent::Triggered, this, &AMainPlayerCharacter::DoSecondaryFire);
 	}
 }
 
@@ -94,4 +95,9 @@ void AMainPlayerCharacter::DoPrimaryFire()
 void AMainPlayerCharacter::DoSecondaryFire()
 {
 	
+}
+
+void AMainPlayerCharacter::ObtainPickup()
+{
+
 }

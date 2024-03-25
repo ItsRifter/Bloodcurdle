@@ -29,7 +29,7 @@ public:
 	UPROPERTY(BlueprintReadOnly)
 	class AActor* Owner;
 
-	UPROPERTY(EditAnywhere, Category = "Gameplay")
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Gameplay")
 	int Health;
 
 	int* HealthPtr = &Health;

@@ -20,7 +20,11 @@ protected:
 	// Called when the game starts
 	virtual void BeginPlay() override;
 
-public:	
+public:
+
+	UPROPERTY(EditAnywhere)
+	class USkeletalMesh* WeaponModel;
+
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 

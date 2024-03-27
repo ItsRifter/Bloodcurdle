@@ -50,10 +50,10 @@ protected:
 	UPROPERTY(EditAnywhere, Category = "Input")
 	class UInputAction* SecondaryFireAction;
 
-	//class AWeaponBase* ActiveWeapon;
+	class AWeaponBase* ActiveWeapon;
 
-	// UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	// TArray<AWeaponBase*> Weapons;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	TArray<AWeaponBase*> Weapons;
 
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;

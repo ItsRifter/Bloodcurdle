@@ -6,11 +6,11 @@
 // Sets default values for this component's properties
 AWeaponBase::AWeaponBase()
 {
-	// Set this component to be initialized when the game starts, and to be ticked every frame.  You can turn these features
-	// off to improve performance if you don't need them.
-	PrimaryActorTick.bCanEverTick = true;
+	//PrimaryActorTick.bCanEverTick = true;
 
-	// ...
+	BaseDamage = 1.0f;
+	MaxAmmo = 10;
+	CurAmmo = MaxAmmo;
 }
 
 
@@ -34,7 +34,27 @@ void AWeaponBase::Tick(float DeltaTime)
 
 void AWeaponBase::PrimaryFire()
 {
+	AActor* Player = GetOwner();
 
+	if(Player)
+	{
+		FVector EyePos;
+		FRotator EyeRot;
+		Player->GetActorEyesViewPoint(EyePos, EyeRot);
+
+		FVector FireDir = EyeRot.Vector();
+
+		float HalfRad = FMath::DegreesToRadians(5.0f);
+        FireDir = FMath::VRandCone(FireDir, HalfRad, HalfRad);
+
+		FVector TraceEnd = EyePos + (FireDir * 128);
+
+		// FHitResult Hit;
+		// if(GetWorld()->LineTraceSingleByChannel(Hit, EyePos, TraceEnd, COLLISION_WEAPON, &Params))
+		// {
+
+		// }
+	}
 }
 
 void AWeaponBase::SecondaryFire()

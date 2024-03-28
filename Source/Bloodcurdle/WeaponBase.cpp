@@ -7,10 +7,6 @@
 AWeaponBase::AWeaponBase()
 {
 	//PrimaryActorTick.bCanEverTick = true;
-
-	BaseDamage = 1.0f;
-	MaxAmmo = 10;
-	CurAmmo = MaxAmmo;
 }
 
 
@@ -32,32 +28,32 @@ void AWeaponBase::Tick(float DeltaTime)
 	// ...
 }
 
-void AWeaponBase::PrimaryFire()
-{
-	AActor* Player = GetOwner();
+// void AWeaponBase::PrimaryFire()
+// {
+// 	// AActor* Player = GetOwner();
 
-	if(Player)
-	{
-		FVector EyePos;
-		FRotator EyeRot;
-		Player->GetActorEyesViewPoint(EyePos, EyeRot);
+// 	// if(Player)
+// 	// {
+// 	// 	FVector EyePos;
+// 	// 	FRotator EyeRot;
+// 	// 	Player->GetActorEyesViewPoint(EyePos, EyeRot);
 
-		FVector FireDir = EyeRot.Vector();
+// 	// 	FVector FireDir = EyeRot.Vector();
 
-		float HalfRad = FMath::DegreesToRadians(5.0f);
-        FireDir = FMath::VRandCone(FireDir, HalfRad, HalfRad);
+// 	// 	float HalfRad = FMath::DegreesToRadians(5.0f);
+//     //     FireDir = FMath::VRandCone(FireDir, HalfRad, HalfRad);
 
-		FVector TraceEnd = EyePos + (FireDir * 128);
+// 	// 	FVector TraceEnd = EyePos + (FireDir * 128);
 
-		// FHitResult Hit;
-		// if(GetWorld()->LineTraceSingleByChannel(Hit, EyePos, TraceEnd, COLLISION_WEAPON, &Params))
-		// {
+// 	// 	// FHitResult Hit;
+// 	// 	// if(GetWorld()->LineTraceSingleByChannel(Hit, EyePos, TraceEnd, COLLISION_WEAPON, &Params))
+// 	// 	// {
 
-		// }
-	}
-}
+// 	// 	// }
+// 	// }
+// }
 
-void AWeaponBase::SecondaryFire()
-{
+// void AWeaponBase::SecondaryFire()
+// {
 	
-}
+// }

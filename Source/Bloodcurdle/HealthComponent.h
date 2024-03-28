@@ -29,17 +29,17 @@ public:
 	UPROPERTY(BlueprintReadOnly)
 	class AActor* Owner;
 
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Gameplay")
-	int Health;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Gameplay", meta = (ClampMin = 1.0f))
+	float Health = 1.0f;
 
-	int* HealthPtr = &Health;
+	float* HealthPtr = &Health;
 	
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
 	UFUNCTION(BlueprintCallable, Category = "Gameplay")
 	/// @brief Performs functionality on player hurt, afterwards call "OnTookDamage"
-	void TakeDamage(int damage);
+	void TakeDamage(float damage);
 
 	UFUNCTION(BlueprintImplementableEvent, BlueprintCallable, Category = "Gameplay")
 	/// @brief Performs functionality after player hurt

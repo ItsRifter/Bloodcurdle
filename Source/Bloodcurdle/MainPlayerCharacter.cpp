@@ -49,8 +49,8 @@ void AMainPlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInpu
 		Input->BindAction(LookAction, ETriggerEvent::Triggered, this, &AMainPlayerCharacter::Look);
 		Input->BindAction(JumpAction, ETriggerEvent::Triggered, this, &AMainPlayerCharacter::DoJump);
 
-		Input->BindAction(PrimaryFireAction, ETriggerEvent::Triggered, this, &AMainPlayerCharacter::DoPrimaryFire);
-		Input->BindAction(SecondaryFireAction, ETriggerEvent::Triggered, this, &AMainPlayerCharacter::DoSecondaryFire);
+		Input->BindAction(PrimaryFireAction, ETriggerEvent::Started, this, &AMainPlayerCharacter::DoPrimaryFire);
+		Input->BindAction(SecondaryFireAction, ETriggerEvent::Started, this, &AMainPlayerCharacter::DoSecondaryFire);
 	}
 }
 
@@ -87,17 +87,22 @@ void AMainPlayerCharacter::DoJump()
 	ACharacter::Jump();
 }
 
-void AMainPlayerCharacter::DoPrimaryFire()
-{
+// void AMainPlayerCharacter::DoPrimaryFire()
+// {
 	
-}
+// }
 
-void AMainPlayerCharacter::DoSecondaryFire()
-{
+// void AMainPlayerCharacter::DoSecondaryFire()
+// {
 	
-}
+// }
 
 void AMainPlayerCharacter::ObtainPickup()
 {
 
+}
+
+void AMainPlayerCharacter::SetWeapon(AWeaponBase* Weapon)
+{
+	ActiveWeapon = Weapon;
 }

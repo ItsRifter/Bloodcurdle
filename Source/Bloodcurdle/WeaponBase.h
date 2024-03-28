@@ -28,15 +28,14 @@ protected:
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Attack")
 	float BaseDamage;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Attack", meta = (ClampMin = 0.0f))
+	float AttackDelay;
+
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Ammo", meta = (ClampMin = 0.0f))
 	int32 MaxAmmo;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Ammo", meta = (ClampMin = 0.0f))
     int32 CurAmmo;
-
-	float LastAttackTime;
-
-	FTimerHandle TH_TimeBetweenAttacks;
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Sounds")
 	USoundCue* FireSound;
@@ -52,12 +51,19 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
+	UFUNCTION(BlueprintImplementableEvent, BlueprintCallable, Category = "Events")
 	void PrimaryFire();
 
+	UFUNCTION(BlueprintImplementableEvent, BlueprintCallable, Category = "Events")
 	void SecondaryFire();
 
+	UFUNCTION(BlueprintImplementableEvent, BlueprintCallable, Category = "Events")
 	void DoReload();
 
+	UFUNCTION(BlueprintImplementableEvent, BlueprintCallable, Category = "Events")
+	void DoDryFire();
+
+	UFUNCTION(BlueprintImplementableEvent, BlueprintCallable, Category = "Events")
 	void PlayAnimation();
 };
 

@@ -26,11 +26,11 @@ void UHealthComponent::TickComponent(float DeltaTime, ELevelTick TickType, FActo
 	// ...
 }
 
-void UHealthComponent::TakeDamage(int damage)
+void UHealthComponent::TakeDamage(float damage)
 {
 	Health -= damage;
 
-	if(Health <= 0)
+	if(Health <= 0.0f)
 		OnDeath();
 	else
 		OnTookDamage();

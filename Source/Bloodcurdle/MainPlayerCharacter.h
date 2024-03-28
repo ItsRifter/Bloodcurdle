@@ -18,7 +18,7 @@ public:
 	// Sets default values for this character's properties
 	AMainPlayerCharacter();
 
-	UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = true))
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, meta = (AllowPrivateAccess = true))
 	class UCameraComponent* Camera;
 
 	// Called every frame
@@ -50,6 +50,7 @@ protected:
 	UPROPERTY(EditAnywhere, Category = "Input")
 	class UInputAction* SecondaryFireAction;
 
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
 	class AWeaponBase* ActiveWeapon;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
@@ -64,10 +65,12 @@ protected:
 
 	void DoJump();
 
+	UFUNCTION(BlueprintImplementableEvent)
 	void DoPrimaryFire();
 
+	UFUNCTION(BlueprintImplementableEvent)
 	void DoSecondaryFire();
 
-	UFUNCTION(BlueprintImplementableEvent)
-	void DoFireEffects(bool wasSecondary = false);
+	UFUNCTION(BlueprintCallable)
+	void SetWeapon(AWeaponBase* Weapon);
 };

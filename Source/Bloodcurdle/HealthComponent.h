@@ -8,7 +8,7 @@
 
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnDeath);
 
-UCLASS( ClassGroup=("Gameplay"), meta=(BlueprintSpawnableComponent) )
+UCLASS( ClassGroup=("Gameplay"), Blueprintable, meta=(BlueprintSpawnableComponent) )
 class BLOODCURDLE_API UHealthComponent : public UActorComponent
 {
 	GENERATED_BODY()

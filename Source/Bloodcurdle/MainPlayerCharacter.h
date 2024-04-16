@@ -21,6 +21,9 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, meta = (AllowPrivateAccess = true))
 	class UCameraComponent* Camera;
 
+	UPROPERTY(BlueprintReadOnly)
+	class UHealthComponent* HealthComponent;
+
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
@@ -31,7 +34,7 @@ public:
 	void ObtainPickup();
 
 protected:
-	
+
 	UPROPERTY(EditAnywhere, Category = "Input")
 	class UInputMappingContext* InputMap;
 

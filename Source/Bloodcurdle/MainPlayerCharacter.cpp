@@ -5,6 +5,7 @@
 #include "InputMappingContext.h"
 #include "EnhancedInputSubsystems.h"
 #include "EnhancedInputComponent.h"
+#include "HealthComponent.h"
 #include "Camera/CameraComponent.h"
 
 // Sets default values
@@ -16,6 +17,8 @@ AMainPlayerCharacter::AMainPlayerCharacter()
 	Camera = CreateDefaultSubobject<UCameraComponent>("Camera");
 	Camera->SetupAttachment(RootComponent);
 	Camera->bUsePawnControlRotation = true;
+
+	HealthComponent = CreateDefaultSubobject<UHealthComponent>("Health");
 }
 
 // Called when the game starts or when spawned
@@ -23,6 +26,8 @@ void AMainPlayerCharacter::BeginPlay()
 {
 	Super::BeginPlay();
 	
+	HealthComponent->Health = 100.0f;
+
 	if(APlayerController* PController = Cast<APlayerController>(Controller))
 	{
 		if(UEnhancedInputLocalPlayerSubsystem* Subsystem = ULocalPlayer::GetSubsystem<UEnhancedInputLocalPlayerSubsystem>(PController->GetLocalPlayer()))
@@ -60,6 +65,8 @@ void AMainPlayerCharacter::Move(const FInputActionValue &InputValue)
 
 	if(IsValid(Controller))
 	{
+		if(HealthComponent->Health <= 0.0f) return;
+
 		const FRotator Rotation = Controller->GetControlRotation();
 		const FRotator YawRot(0, Rotation.Yaw, 0);
 
@@ -86,16 +93,6 @@ void AMainPlayerCharacter::DoJump()
 {
 	ACharacter::Jump();
 }
-
-// void AMainPlayerCharacter::DoPrimaryFire()
-// {
-	
-// }
-
-// void AMainPlayerCharacter::DoSecondaryFire()
-// {
-	
-// }
 
 void AMainPlayerCharacter::ObtainPickup()
 {

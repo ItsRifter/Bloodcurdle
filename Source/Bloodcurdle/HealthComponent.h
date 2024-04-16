@@ -38,11 +38,11 @@ public:
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
 	UFUNCTION(BlueprintCallable, Category = "Gameplay")
-	/// @brief Performs functionality on player hurt, afterwards call "OnTookDamage"
+	/// @brief Performs functionality on owner hurt
 	void TakeDamage(float damage);
 
 	UFUNCTION(BlueprintImplementableEvent, BlueprintCallable, Category = "Gameplay")
-	/// @brief Performs functionality after player hurt
+	/// @brief Performs functionality after owner hurt, this is after "TakeDamage" has been called
 	void OnTookDamage();
 
 	void OnDeath();

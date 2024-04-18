@@ -32,7 +32,7 @@ protected:
 	float AttackDelay;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Attack", meta = (ClampMin = 0.0f))
-	float Range = 128.0f;
+	float AttackRange = 128.0f;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Ammo", meta = (ClampMin = 0.0f))
 	int32 MaxAmmo;

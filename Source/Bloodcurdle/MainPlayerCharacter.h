@@ -76,4 +76,7 @@ protected:
 
 	UFUNCTION(BlueprintCallable)
 	void SetWeapon(AWeaponBase* Weapon);
+
+	UFUNCTION(BlueprintCallable)
+	void AddWeapon(AWeaponBase* NewWeapon);
 };

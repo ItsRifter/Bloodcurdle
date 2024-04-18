@@ -99,6 +99,12 @@ void AMainPlayerCharacter::ObtainPickup()
 
 }
 
+void AMainPlayerCharacter::AddWeapon(AWeaponBase* NewWeapon)
+{
+	//NewWeapon->AttachRootComponentToActor(this);
+	Weapons.Add(NewWeapon);
+}
+
 void AMainPlayerCharacter::SetWeapon(AWeaponBase* Weapon)
 {
 	ActiveWeapon = Weapon;

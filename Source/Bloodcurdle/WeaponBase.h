@@ -22,8 +22,9 @@ public:
 	AWeaponBase();
 
 protected:
-	// Called when the game starts
-	virtual void BeginPlay() override;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Slots")
+	int InvSlot = 0;
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Attack")
 	float BaseDamage;
@@ -46,10 +47,15 @@ protected:
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Sounds")
 	USoundCue* ReloadSound;
 
+	// Called when the game starts
+	virtual void BeginPlay() override;
 public:
 
 	UPROPERTY(EditAnywhere)
 	class UStaticMesh* WeaponModel;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, meta = (AllowPrivateAccess = true))
+	class UCapsuleComponent* Collider;
 
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;

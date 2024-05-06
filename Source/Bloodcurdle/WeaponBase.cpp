@@ -2,13 +2,16 @@
 
 
 #include "WeaponBase.h"
+#include "Components/CapsuleComponent.h"
 
 // Sets default values for this component's properties
 AWeaponBase::AWeaponBase()
 {
 	//PrimaryActorTick.bCanEverTick = true;
-}
 
+	Collider = CreateDefaultSubobject<UCapsuleComponent>(TEXT("TriggerCollider"));
+	Collider->SetupAttachment(RootComponent);
+}
 
 // Called when the game starts
 void AWeaponBase::BeginPlay()
@@ -16,7 +19,6 @@ void AWeaponBase::BeginPlay()
 	Super::BeginPlay();
 
 	// ...
-	
 }
 
 
@@ -24,8 +26,6 @@ void AWeaponBase::BeginPlay()
 void AWeaponBase::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-
-	// ...
 }
 
 // void AWeaponBase::PrimaryFire()
@@ -55,5 +55,4 @@ void AWeaponBase::Tick(float DeltaTime)
 
 // void AWeaponBase::SecondaryFire()
 // {
-	
 // }

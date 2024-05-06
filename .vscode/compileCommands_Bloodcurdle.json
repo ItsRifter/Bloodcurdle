@@ -72,22 +72,6 @@
         "directory": "D:\\EpicGames\\UE_5.3\\Engine\\Source"
     },
     {
-        "file": "D:\\UnrealProjects\\Bloodcurdle\\Source\\Bloodcurdle\\Private\\EnemyBase.cpp",
-        "arguments": [
-            "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\Hostx64\\x64\\cl.exe",
-            "@D:\\UnrealProjects\\Bloodcurdle\\.vscode\\compileCommands_Bloodcurdle\\Bloodcurdle.1.rsp"
-        ],
-        "directory": "D:\\EpicGames\\UE_5.3\\Engine\\Source"
-    },
-    {
-        "file": "D:\\UnrealProjects\\Bloodcurdle\\Source\\Bloodcurdle\\Public\\EnemyBase.h",
-        "arguments": [
-            "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\Hostx64\\x64\\cl.exe",
-            "@D:\\UnrealProjects\\Bloodcurdle\\.vscode\\compileCommands_Bloodcurdle\\Bloodcurdle.1.rsp"
-        ],
-        "directory": "D:\\EpicGames\\UE_5.3\\Engine\\Source"
-    },
-    {
         "file": "D:\\UnrealProjects\\Bloodcurdle\\Source\\Bloodcurdle\\WeaponBase.cpp",
         "arguments": [
             "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\Hostx64\\x64\\cl.exe",

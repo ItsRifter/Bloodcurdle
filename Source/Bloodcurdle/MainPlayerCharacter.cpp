@@ -6,6 +6,8 @@
 #include "EnhancedInputSubsystems.h"
 #include "EnhancedInputComponent.h"
 #include "HealthComponent.h"
+#include "WeaponBase.h"
+#include "Components/CapsuleComponent.h"
 #include "Camera/CameraComponent.h"
 
 // Sets default values
@@ -94,18 +96,27 @@ void AMainPlayerCharacter::DoJump()
 	ACharacter::Jump();
 }
 
-void AMainPlayerCharacter::ObtainPickup()
-{
-
-}
-
-void AMainPlayerCharacter::AddWeapon(AWeaponBase* NewWeapon)
-{
-	//NewWeapon->AttachRootComponentToActor(this);
-	Weapons.Add(NewWeapon);
-}
-
 void AMainPlayerCharacter::SetWeapon(AWeaponBase* Weapon)
 {
+	if(IsValid(ActiveWeapon) && ActiveWeapon != Weapon)
+		ActiveWeapon->SetActorHiddenInGame(true);
+
+	Weapon->SetActorHiddenInGame(false);
 	ActiveWeapon = Weapon;
+}
+
+void AMainPlayerCharacter::AddWeapon(AWeaponBase* NewWeapon, bool setActive)
+{
+	//NewWeapon->AttachToComponent(Camera, FAttachmentTransformRules::SnapToTargetNotIncludingScale);
+	Weapons.Add(NewWeapon);
+
+	NewWeapon->SetActorEnableCollision(false);
+	NewWeapon->Collider->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+
+	if(setActive)
+		SetWeapon(NewWeapon);
+	else
+		NewWeapon->SetActorHiddenInGame(true);
+
+	NewWeapon->SetOwner(this);
 }

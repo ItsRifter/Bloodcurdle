@@ -21,7 +21,7 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, meta = (AllowPrivateAccess = true))
 	class UCameraComponent* Camera;
 
-	UPROPERTY(BlueprintReadOnly)
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
 	class UHealthComponent* HealthComponent;
 
 	// Called every frame
@@ -29,9 +29,6 @@ public:
 
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
-
-	UFUNCTION(BlueprintCallable, Category = "Gameplay")
-	void ObtainPickup();
 
 protected:
 
@@ -78,5 +75,5 @@ protected:
 	void SetWeapon(AWeaponBase* Weapon);
 
 	UFUNCTION(BlueprintCallable)
-	void AddWeapon(AWeaponBase* NewWeapon);
+	void AddWeapon(AWeaponBase* NewWeapon, bool setActive = false);
 };
